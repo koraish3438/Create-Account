@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context=".MainActivity">
+
+
+    <View
+        android:id="@+id/v1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#98000000"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/createTV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="47dp"
+        android:text="Create Account"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="34.sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/nameIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your name"
+        android:textColorHint="@color/black"
+        android:layout_marginHorizontal="20.dp"
+        android:layout_marginTop="24.dp"
+        app:layout_constraintTop_toBottomOf="@+id/createTV"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/nameET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:cursorVisible="true"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/emailIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your email"
+        android:textColorHint="@color/black"
+        android:layout_marginHorizontal="20.dp"
+        android:layout_marginTop="24.dp"
+        app:layout_constraintTop_toBottomOf="@+id/nameIL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/emailET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:contextClickable="true"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your password"
+        android:textColorHint="@color/black"
+        android:layout_marginHorizontal="20.dp"
+        android:layout_marginTop="24.dp"
+        app:layout_constraintTop_toBottomOf="@+id/emailIL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/passwordET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:contextClickable="true"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/cPasswordIL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter your confirm password"
+        android:textColorHint="@color/black"
+        android:layout_marginHorizontal="20.dp"
+        android:layout_marginTop="24.dp"
+        app:layout_constraintTop_toBottomOf="@+id/passwordIL"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/cPasswordET"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#ffffff"
+            android:contextClickable="true"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/regBtn"
+        android:layout_width="0.dp"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="50.dp"
+        android:layout_marginTop="34dp"
+        android:backgroundTint="#FFFFFF"
+        android:hint="Register"
+        android:textColorHint="@color/black"
+        android:textSize="20.sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/cPasswordIL" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/orLog"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_marginTop="30.dp"
+        app:layout_constraintTop_toBottomOf="@id/regBtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <View
+            android:layout_width="60.dp"
+            android:layout_height="2.dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5.dp"
+            android:background="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="15.dp"
+            android:text="Or login with"
+            android:textColor="@color/white"
+            android:textSize="16.sp" />
+
+        <View
+            android:layout_width="60.dp"
+            android:layout_height="2.dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="5.dp"
+            android:background="@color/white" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/orIcon"
+        android:layout_marginVertical="30.dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/orLog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        >
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="25.dp"
+            android:src="@drawable/google" />
+
+        <ImageView
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="25.dp"
+            android:src="@drawable/instagram" />
+
+        <ImageView
+            android:layout_width="40.dp"
+            android:layout_height="40.dp"
+            android:layout_marginHorizontal="25.dp"
+            android:src="@drawable/facebook" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/go_signup_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="30.dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/orIcon">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="All ready have an account?"
+            android:textColor="@color/white"
+            android:textSize="16.sp" />
+
+        <TextView
+            android:id="@+id/mainLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5.dp"
+            android:text="Login"
+            android:textColor="@color/white"
+            android:textSize="18.sp" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
