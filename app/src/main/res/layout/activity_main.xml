@@ -15,8 +15,10 @@
         android:background="#98000000"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/createTV"
@@ -29,14 +31,16 @@
         android:textSize="34.sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/nameIL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your name"
-        android:textColorHint="@color/black"
+        android:hint="Name"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
         android:layout_marginHorizontal="20.dp"
         android:layout_marginTop="24.dp"
         app:layout_constraintTop_toBottomOf="@+id/createTV"
@@ -47,9 +51,9 @@
             android:id="@+id/nameET"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ffffff"
+            android:background="#90000000"
             android:cursorVisible="true"
-            android:textColor="@color/black" />
+            android:textColor="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -58,8 +62,9 @@
         android:id="@+id/emailIL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your email"
-        android:textColorHint="@color/black"
+        android:hint="Email"
+        app:hintTextColor="@color/white"
+        android:textColorHint="@color/white"
         android:layout_marginHorizontal="20.dp"
         android:layout_marginTop="24.dp"
         app:layout_constraintTop_toBottomOf="@+id/nameIL"
@@ -70,9 +75,10 @@
             android:id="@+id/emailET"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ffffff"
+            android:background="#90000000"
             android:contextClickable="true"
-            android:textColor="@color/black" />
+            android:inputType="textEmailAddress"
+            android:textColor="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -81,8 +87,10 @@
         android:id="@+id/passwordIL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your password"
-        android:textColorHint="@color/black"
+        android:hint="Password"
+        app:endIconMode="password_toggle"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
         android:layout_marginHorizontal="20.dp"
         android:layout_marginTop="24.dp"
         app:layout_constraintTop_toBottomOf="@+id/emailIL"
@@ -93,9 +101,10 @@
             android:id="@+id/passwordET"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ffffff"
+            android:background="#90000000"
             android:contextClickable="true"
-            android:textColor="@color/black" />
+            android:inputType="textPassword"
+            android:textColor="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -104,8 +113,10 @@
         android:id="@+id/cPasswordIL"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your confirm password"
-        android:textColorHint="@color/black"
+        android:hint="Confirm password"
+        app:endIconMode="password_toggle"
+        android:textColorHint="@color/white"
+        app:hintTextColor="@color/white"
         android:layout_marginHorizontal="20.dp"
         android:layout_marginTop="24.dp"
         app:layout_constraintTop_toBottomOf="@+id/passwordIL"
@@ -116,27 +127,28 @@
             android:id="@+id/cPasswordET"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#ffffff"
+            android:background="#90000000"
             android:contextClickable="true"
-            android:textColor="@color/black" />
+            android:inputType="textPassword"
+            android:textColor="@color/white" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <Button
         android:id="@+id/regBtn"
-        android:layout_width="0.dp"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="50.dp"
+        android:layout_marginHorizontal="50dp"
         android:layout_marginTop="34dp"
-        android:backgroundTint="#FFFFFF"
-        android:hint="Register"
-        android:textColorHint="@color/black"
-        android:textSize="20.sp"
+        android:background="@drawable/button_border"
+        android:text="Sign up"
+        android:textColor="@color/white"
+        android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/cPasswordIL" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -151,7 +163,7 @@
         >
 
         <View
-            android:layout_width="60.dp"
+            android:layout_width="110.dp"
             android:layout_height="2.dp"
             android:layout_gravity="center"
             android:layout_marginStart="5.dp"
@@ -161,12 +173,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="15.dp"
-            android:text="Or login with"
+            android:text="Or signup with"
             android:textColor="@color/white"
             android:textSize="16.sp" />
 
         <View
-            android:layout_width="60.dp"
+            android:layout_width="110.dp"
             android:layout_height="2.dp"
             android:layout_gravity="center"
             android:layout_marginEnd="5.dp"
